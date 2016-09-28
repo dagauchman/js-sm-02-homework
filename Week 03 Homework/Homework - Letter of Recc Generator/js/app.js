@@ -67,7 +67,10 @@ $(document).ready(function(){
 
 			$('div.output').append('<p>' + text + '</p>');
 
+
 		});
+
+		$('div.output').fadeIn('slow');
 
 	});
 
