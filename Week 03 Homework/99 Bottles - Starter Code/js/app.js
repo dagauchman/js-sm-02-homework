@@ -3,12 +3,11 @@ $(document).ready(function(){
 	//99 bottles of beer on the wall, 99 bottles of beer.
 	//Take one down and pass it around, 98 bottles of beer on the wall.
 
-	var NUM = [98];
+var i = 99;
 
-for (var i = 0; i < NUM.length; i--) {
-	$('div.bottles').append(NUM[i] + ' bottles of beer on the wall, ' + NUM[i] + ' bottles of beer.</br> Take one down and pass it around, ' + NUM[i-1] + ' bottles of beer on the wall.')
+for ( i > 0; i-- ) {
+	$('div.bottles').append(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.</br> Take one down and pass it around, ' + i-- + ' bottles of beer on the wall.')
 };
-
 
 
 });
