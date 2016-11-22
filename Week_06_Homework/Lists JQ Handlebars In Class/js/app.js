@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
 				console.log(  value );
-				addItem( value.text, value.id );
+				addItem( value.text, value.id, true );
 				grabListId = value.id;
 
 
@@ -32,12 +32,13 @@ $(document).ready(function(){
 	
 
 
-	function addItem(text, itemId){
+	function addItem(text, itemId, silent){
 
 		
 
 		// 3. Make sure input isn't empty INPUT != ''
-		if( text == '' ){
+		
+			if( text == '' && silent == false){
 
 			alert('Yo, we need an item...');
 			return;
@@ -83,7 +84,7 @@ $(document).ready(function(){
 			success: function(data){
 
 				console.log( data );
-				addItem(inputValue, data.item_id);
+				addItem(inputValue, data.item_id, false);
 			}
 		});
 
@@ -95,27 +96,29 @@ $(document).ready(function(){
 	});
 
 	$('#list').on('change', 'input[type=checkbox]', function(){
-		var input = $('input#new-thing');
-		var inputValue = input.val();
-		var inputValue2 = 'hello';
+		// var input = $('input#new-thing');
+		var inputItem = $(this);
+		var inputValue = inputItem.val();
+		// var inputValue2 = 'hello';
+		var checked = $(this).is(':checked');
 
 		var itemID = $(this).parent().data('item-id');
-		var listItem = $(this);
+		
 		
 		$.ajax({
 
 			url: 'http://www.kameronzach.com/todo/api/',
 			method: 'POST',
-			data: { action: 'updateItem', list_id: 36, item_id: itemID, completed: true, token: '58097cbe88b3a', text: inputValue2  },
+			data: { action: 'updateItem', list_id: 36, item_id: itemID, completed: checked, token: '58097cbe88b3a', text: inputValue },
 			dataType: 'json',
 			success: function(data){
 
 				console.log( data );
 
-				if( listItem.parent().hasClass('done') ){
-					listItem.parent().removeClass('done');
+				if( inputItem.parent().hasClass('done') ){
+					inputItem.parent().removeClass('done');
 				}else{
-					listItem.parent().addClass('done');
+					inputItem.parent().addClass('done');
 				}
 
 				

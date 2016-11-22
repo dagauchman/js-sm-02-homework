@@ -1,0 +1,186 @@
+/*AP Red = #FF322E*/
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}  
+
+div#map {
+  position: relative; 
+  height: 100%;
+  background-color: #608085;
+}
+
+.leaflet-interactive{
+
+	/*background-color: grey;*/
+
+}
+
+div.container {
+	/*width: 100%;*/
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+
+	/*float:right;*/
+	width: 395px;
+	height:100%;
+	background-color: #EDEDED;
+	overflow: auto;
+
+}
+
+div#scrollContainer {
+
+	width: 100%;
+	/*height: 100%;*/
+	overflow: auto;
+
+}
+
+div#logoContainer {
+
+	margin:auto;
+	width: 100%;
+	height:110px;
+	/*background-color: #303030;*/
+	-webkit-box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
+
+
+}
+
+img#logoImage {
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+/*h1#logoText{
+
+	text-align: center;
+	font-family:Helvetica Neue;
+	color: white;
+	margin:auto;
+	width:80%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+
+}*/
+
+
+div.stateContainer {
+
+	margin:auto;
+	width: 100%;
+	height:72px;
+	/*background-color: #7A7A7A;*/
+	border-bottom: 3px solid #FF322E;
+
+}
+
+
+
+h1.stateText{
+	display: block;
+	text-align: right;
+	font-family:Helvetica Neue;
+	color: black;
+	font-size: 30px;
+	margin:auto;
+	/*width:80%;*/
+	padding-top: 9%;
+	/*bottom: 0px;*/
+	/*vertical-align: bottom;*/
+	/*padding-bottom: 10%;*/
+	/*bottom: -10px;*/
+	padding-right: 3%;
+}
+
+
+
+div.articleContainer {
+	display: block;
+	overflow: auto;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	margin-left:auto;
+	margin-right:auto;
+	width: 80%;
+	/*height:370px;*/
+	background-color: white;
+	-webkit-box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.18);
+	-moz-box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.18);
+	box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.18);
+
+}
+
+a:link {
+    text-decoration: none;
+    display: block;
+}
+
+div.articleContainerInner {
+
+	padding: 3%;
+	
+	/*width: 100%;
+	height:100%;*/
+	/*background-color: red;*/
+
+}
+
+img.articleImage {
+	/*margin-top: 5%;*/
+	/*margin-bottom: 2%;*/
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	/*height:400px;*/
+}
+
+h1.articleTitle {
+
+	font-family:Helvetica Neue;
+	font-size: 18px;
+	font-weight: 600;
+	color: black;
+	margin: 0;
+
+}
+
+h1.articleAuthor {
+	font-family:Helvetica Neue;
+	font-weight: 400;
+	font-size: 14px;
+	padding-top: 1%;
+	color: #6E6E6E;
+	margin: 0;
+	text-transform:uppercase;
+
+}
+
+p.articleDescription {
+	margin-top: 3%;
+	font-family:Helvetica Neue;
+	font-weight: 200;
+	font-size: 14px;
+	color: black;
+
+}
+
+.mycluster {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #303030;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
